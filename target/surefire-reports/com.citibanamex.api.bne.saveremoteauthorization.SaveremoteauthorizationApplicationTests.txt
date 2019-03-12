@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: com.citibanamex.api.bne.saveremoteauthorization.SaveremoteauthorizationApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 9.935 s <<< FAILURE! - in com.citibanamex.api.bne.saveremoteauthorization.SaveremoteauthorizationApplicationTests
+contextLoads(com.citibanamex.api.bne.saveremoteauthorization.SaveremoteauthorizationApplicationTests)  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'apicontroller': Unsatisfied dependency expressed through field 'repo'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accountsRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.citibanamex.api.bne.saveremoteauthorization.repositories.accountsRepository.findByAccount(java.lang.Long)! No property account found for type model!
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accountsRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.citibanamex.api.bne.saveremoteauthorization.repositories.accountsRepository.findByAccount(java.lang.Long)! No property account found for type model!
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.citibanamex.api.bne.saveremoteauthorization.repositories.accountsRepository.findByAccount(java.lang.Long)! No property account found for type model!
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property account found for type model!
+
