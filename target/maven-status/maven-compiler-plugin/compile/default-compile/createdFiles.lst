@@ -1,4 +1,4 @@
-com/citibanamex/api/bne/saveremoteauthorization/repositories/accountsRepository.class
-com/citibanamex/api/bne/saveremoteauthorization/SaveremoteauthorizationApplication.class
-com/citibanamex/api/bne/saveremoteauthorization/controller/apicontroller.class
-com/citibanamex/api/bne/saveremoteauthorization/beans/model.class
+com\citibanamex\api\bne\saveremoteauthorization\controller\apicontroller.class
+com\citibanamex\api\bne\saveremoteauthorization\beans\model.class
+com\citibanamex\api\bne\saveremoteauthorization\repositories\accountsRepository.class
+com\citibanamex\api\bne\saveremoteauthorization\SaveremoteauthorizationApplication.class

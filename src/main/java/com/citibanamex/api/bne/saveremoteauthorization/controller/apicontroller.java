@@ -28,7 +28,7 @@ public class apicontroller {
     public List<model> getAllOwnAccounts() {
 
         List<model> mod = new ArrayList<>();
-        repo.findAll().forEach(mod::add);
+        repo.getAll();
 
         return mod;
     }

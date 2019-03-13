@@ -1,11 +1,23 @@
 package com.citibanamex.api.bne.saveremoteauthorization.repositories;
 
 import java.util.List;
-import org.springframework.data.repository.CrudRepository;
 import com.citibanamex.api.bne.saveremoteauthorization.beans.model;
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+import org.springframework.stereotype.Repository;
+import javax.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
 
-public interface accountsRepository extends CrudRepository<model, Long> {
+@Repository
+@Transactional
+public class accountsRepository {
+    @Autowired
+    private EntityManager mod;
     
-    List<model> findByAccount(Long account);
+    public List<model> getAll() {
+        Query query = mod.createQuery("SELECT u FROM model u");
+        List<model> usuarios = query.getResultList();
+        return usuarios;
+    }
     
 }

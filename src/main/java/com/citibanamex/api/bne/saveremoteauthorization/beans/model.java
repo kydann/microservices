@@ -1,5 +1,6 @@
 package com.citibanamex.api.bne.saveremoteauthorization.beans;
 
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,12 +10,11 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "BBS_OWN_ACCOUNT")
-public class model {
+public class model implements Serializable{
 
+    @Column(name = "ACCOUNT_NUMBER")
     @Id
-    //@Column(name = "ACCOUNT_NUMBER")
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long ACCOUNT_NUMBER;
+    private String ACCOUNT_NUMBER;
 
     @Column(name = "CONTRACT_NUMBER")
     private String CONTRACT_NUMBER;
@@ -64,7 +64,7 @@ public class model {
     @Column(name = "LAST_PAY_DATE")
     private String LAST_PAY_DATE;
 
-    public model(Long ACCOUNT_NUMBER, String CONTRACT_NUMBER, String PRODUCT_CODE, String INSTRUMENT_CODE, String BRANCH,
+    public model(String ACCOUNT_NUMBER, String CONTRACT_NUMBER, String PRODUCT_CODE, String INSTRUMENT_CODE, String BRANCH,
             String ACCOUNT_NAME, String ACCOUNT_NICKNAME, String ACCOUNT_TYPE, String CURRENCY, String STARTING_DATE,
             String BANK_ELEC_USAGE, String CLIENT_RELATION, String DATE, String TIME, String CELL_NUMBER, String LAST_PAY,
             String LAST_PAY_DATE) {
@@ -92,14 +92,14 @@ public class model {
     /**
      * @return the ACCOUNT_NUMBER
      */
-    public long getACCOUNT_NUMBER() {
+    public String getACCOUNT_NUMBER() {
         return ACCOUNT_NUMBER;
     }
 
     /**
      * @param ACCOUNT_NUMBER the ACCOUNT_NUMBER to set
      */
-    public void setACCOUNT_NUMBER(long ACCOUNT_NUMBER) {
+    public void setACCOUNT_NUMBER(String ACCOUNT_NUMBER) {
         this.ACCOUNT_NUMBER = ACCOUNT_NUMBER;
     }
 
