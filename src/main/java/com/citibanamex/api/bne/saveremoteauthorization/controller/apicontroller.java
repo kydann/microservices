@@ -16,7 +16,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@CrossOrigin(origins = "http://localhost:4200")
+//@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api")
 public class apicontroller {
@@ -32,7 +32,7 @@ public class apicontroller {
 
         return mod;
     }
-
+/*
     @RequestMapping(value = "/addOwnAccount", method = RequestMethod.POST)
     public model addAccount(@RequestBody model mod) {
 
@@ -45,7 +45,7 @@ public class apicontroller {
     }
 
     @RequestMapping(value = "/deleteOwnAccount/{account}", method = RequestMethod.DELETE)
-    public ResponseEntity<String> deleteOwnAccount(@PathVariable("account") long account) {
+    public ResponseEntity<String> deleteOwnAccount(@PathVariable("account") model account) {
 
         repo.deleteById(account);
 
@@ -57,6 +57,7 @@ public class apicontroller {
     public List<model> getOwnAccountById(@PathVariable("account") long account) {
 
         List<model> mod = repo.findByAccount(account);
+        
         return mod;
     }
 
@@ -89,5 +90,5 @@ public class apicontroller {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
-
+*/
 }
